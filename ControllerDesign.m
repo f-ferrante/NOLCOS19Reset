@@ -12,7 +12,7 @@ nu=min(size(Bp));
 ny=min(size(Cp));
 
 Cbreve=blkdiag(eye(np), Cp);
-rho=0.01;
+rho=0.1;
 sigma=10;
 t=sdpvar(1,1,'symmetric');
 X=sdpvar(np,np,'symmetric');

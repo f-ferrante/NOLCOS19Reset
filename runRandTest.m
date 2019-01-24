@@ -1,5 +1,5 @@
 global Ac Bc Cc Dc
-for i=1:1
+for i=1:100
 global flag
 flag=0;
 a=2*pi*rand;
@@ -30,8 +30,7 @@ L2normHybrid(i)=sqrt(trapz(t,normxHybrid));
  yp=xp(:,1);
  normxCT=(xp(:,1).^2+xp(:,2).^2);
  L2normCT(i)=sqrt(trapz(t,normxCT));
-
- %%%Test pole-placement poles -1\pm j*sqrt(2)/2
+%%%Test pole-placement poles -1\pm i
 %Store hybrdid Controller
 Ac0=Ac;
 Bc0=Bc;
@@ -39,8 +38,8 @@ Cc0=Cc;
 Dc0=Dc;
 clear Ac Bc Cc Dc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Kp=[-3/2, -2];
-Lp=[2; 3/2];
+Kp=[-2, -2];
+Lp=[2; 2];
 Controller=ss(Ap+Bp*Kp-Lp*Cp,Lp, Kp,0);
 global Ac Bc Cc Dc
 Ac=Controller.a;

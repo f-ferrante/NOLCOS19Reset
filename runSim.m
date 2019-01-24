@@ -12,7 +12,7 @@ function [outF]= runSim(x0)
  %x4_0=2*0.7653;
 %x0 = [x1_0;x2_0;x3_0;x4_0;0;0];
 % simulation horizon
-TSPAN=[0  10];
+TSPAN=[0  7];
 JSPAN = [0 1000];
 
 % rule for jumps
