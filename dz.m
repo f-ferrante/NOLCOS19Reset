@@ -4,6 +4,6 @@ function y= dz(x)
 if(abs(x)<=1)
 y=0;
 else
-y=x;
+y=sign(x)*(abs(x)-1);
 end
 
